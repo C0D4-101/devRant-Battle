@@ -78,6 +78,7 @@ li a {
 li img {
     width: 100px;
     padding: 10px;
+    border-radius: 73px;
 }
 
 li a div::after {
