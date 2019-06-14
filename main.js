@@ -16,8 +16,8 @@ function init() {
     document.getElementById('player2-doots').innerHTML = player2.score;
 
     //set player url
-    document.getElementById('player1-url').href = 'https://devrant.com/user/' + player1.name;
-    document.getElementById('player2-url').href = 'https://devrant.com/user/' + player2.name;
+    document.getElementById('player1-url').href = 'https://devrant.com/users/' + player1.name;
+    document.getElementById('player2-url').href = 'https://devrant.com/users/' + player2.name;
     //set player name
     document.getElementById('player1-name').innerHTML = player1.name;
     document.getElementById('player2-name').innerHTML = player2.name;
