@@ -58,7 +58,6 @@ function getDetails(user) {
         if (xhr.status != 200) {
             error = true;
         } else {
-
             let response = JSON.parse(xhr.response);
             details['score'] = response.profile.score;
             details['avatar'] = response.profile.avatar_sm.i;
@@ -70,10 +69,10 @@ function getDetails(user) {
     };
 
     if (error) {
-        document.getElementById('error').innerHTML = 'Unable to contact API';
-        document.getElementById('ahead').innerHTML = 'UNKOWN';
-        document.getElementById('dootStatus').innerHTML = 'Incomplete Data';
-        return 0;
+        details['score'] = 0;
+        details['avatar'] = 'v-35_c-3_b-2_g-m_9-1_1-3_16-1_3-1_8-1_7-1_5-1_12-3_6-9_2-1_22-1_4-1.jpg';
+        details['name'] = 'Undefined';
+        return details;
     }
 }
 
