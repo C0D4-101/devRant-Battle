@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css?family=Comfortaa');
+body,
+html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    font-family: Comfortaa;
+    text-align: center;
+    background: #000008;
+}
+
+.card {
+    width: 650px;
+    height: 480px;
+    border-radius: 4px;
+    box-shadow: -8px 0 5px -5px rgba(0, 0, 0, .5) inset;
+    overflow: hidden;
+    position: relative;
+    background-color: #282c34;
+}
+
+h2 {
+    font-size: 8em;
+    margin: 20px 0px;
+}
+
+p {
+    font-size: 1em;
+    margin: 0px;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+li {
+    list-style-type: none;
+    width: 50%;
+}
+
+li a {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    border-top: 1px solid #ddd;
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+    font-size: 2em;
+}
+
+li img {
+    width: 100px;
+    padding: 10px;
+}
+
+li div {
+    font-size: 1.5em;
+    margin-top: 18px;
+}
