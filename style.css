@@ -24,12 +24,18 @@ body {
 
 .card {
     width: 650px;
-    height: 480px;
+    min-height: 480px;
+    height: auto;
     border-radius: 4px;
     box-shadow: -8px 0 5px -5px rgba(0, 0, 0, .5) inset;
     overflow: hidden;
     position: relative;
     background-color: #282c34;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2em;
 }
 
 h2 {
@@ -53,6 +59,8 @@ ul {
 li {
     list-style-type: none;
     width: 50%;
+    max-width: 50%;
+    word-break: break-all;
 }
 
 li a {
@@ -78,6 +86,7 @@ li img {
 }
 
 li div {
-    font-size: 1.5em;
+    font-size: 1em;
+    word-wrap: break-word;
     margin-top: 18px;
 }
