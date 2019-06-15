@@ -11,19 +11,8 @@ function init() {
     //set battle name
     document.getElementById('battle-name').innerHTML = 'Has ' + player1.name + ' passed ' + player2.name + ' Yet?';
 
-    //set player doots
-    document.getElementById('player1-doots').innerHTML = player1.score;
-    document.getElementById('player2-doots').innerHTML = player2.score;
-
-    //set player url
-    document.getElementById('player1-url').href = 'https://devrant.com/users/' + player1.name;
-    document.getElementById('player2-url').href = 'https://devrant.com/users/' + player2.name;
-    //set player name
-    document.getElementById('player1-name').innerHTML = player1.name;
-    document.getElementById('player2-name').innerHTML = player2.name;
-    //set player image
-    document.getElementById('player1-img').src = 'https://avatars.devrant.com/' + player1.avatar;
-    document.getElementById('player2-img').src = 'https://avatars.devrant.com/' + player2.avatar;
+    generateUserContent(player1, 1);
+    generateUserContent(player2, 2);
 
     if (player1.score > player2.score) {
         document.getElementById('ahead').innerHTML = 'YES';
@@ -74,6 +63,17 @@ function getDetails(user) {
         details['name'] = 'Undefined';
         return details;
     }
+}
+
+function generateUserContent(userDetails, user) {
+    //set player doots
+    document.getElementById('player' + user + '-doots').innerHTML = userDetails.score;
+    //set player url
+    document.getElementById('player' + user + '-url').href = 'https://devrant.com/users/' + userDetails.name;
+    //set player name
+    document.getElementById('player' + user + '-name').innerHTML = userDetails.name;
+    //set player image
+    document.getElementById('player' + user + '-img').src = 'https://avatars.devrant.com/' + userDetails.avatar;
 }
 
 init();
