@@ -1,9 +1,9 @@
-var player1;
-var player2;
+let player1;
+let player2;
 
 function init() {
-    var p1 = location.search.split('p1=')[1]
-    var p2 = location.search.split('p2=')[1]
+    let p1 = location.search.split('p1=')[1];
+    let p2 = location.search.split('p2=')[1];
 
     player1 = getDetails(getId(p1));
     player2 = getDetails(getId(p2));
@@ -25,15 +25,19 @@ function init() {
 
 function getId(username) {
     let error = false;
+    let undefinedId = 63506;
     let xhr = new XMLHttpRequest();
     xhr.open('GET', 'https://devrant.com/api/get-user-id?username=' + username + '&app=3', false);
 
     xhr.send();
     if (xhr.status != 200) {
-        console.log('unable to fetch userid for ' + username);
+        return undefinedId;
     } else {
         let response = JSON.parse(xhr.response);
-        return response.user_id;
+        if (response.success)
+            return response.user_id;
+
+        return undefinedId;
     }
 }
 
